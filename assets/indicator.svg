@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="5.5" height="5.5" viewBox="0 0 5.5 5.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #292929;
+        filter: url(#filter-chain-1);
+      }
+    </style>
+
+    <filter id="filter-chain-1" filterUnits="userSpaceOnUse">
+      <feImage x="0" y="0" width="5.5" height="5.5" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNS41IiBoZWlnaHQ9IjUuNSI+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjIuNzUiIHkxPSI1LjUiIHgyPSIyLjc1Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNhM2EzYTMiLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+      <feOffset dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="innerShadowBlur"/>
+      <feFlood flood-opacity="0.75"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend in2="gradientFill" result="innerShadow"/>
+    </filter>
+  </defs>
+  <circle cx="2.75" cy="2.75" r="2.75" class="cls-1"/>
+</svg>

@@ -1,0 +1,6 @@
+<filter id="filter-chain-1" filterUnits="userSpaceOnUse">
+  <feOffset dy="1" in="SourceAlpha"/>
+  <feGaussianBlur result="dropBlur"/>
+  <feFlood flood-color="#fff" flood-opacity="0.5"/>
+  <feComposite operator="in" in2="dropBlur" result="dropShadowComp"/>
+  <feComposite in="SourceGraphic" result="shadowed"/>
