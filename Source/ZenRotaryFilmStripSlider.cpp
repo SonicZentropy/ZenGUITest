@@ -340,6 +340,7 @@ public:
 
 	void sendDragStart()
 	{
+		DBG("Send drag start");
 		owner.startedDragging();
 
 		Component::BailOutChecker checker(&owner);
@@ -349,6 +350,7 @@ public:
 
 	void sendDragEnd()
 	{
+		DBG("Send drag end");
 		owner.stoppedDragging();
 
 		sliderBeingDragged = -1;
@@ -865,6 +867,7 @@ public:
 
 	void mouseDrag(const MouseEvent& e)
 	{
+		//DBG("In film strip slider PIMPL mouse drag");
 		if (useDragEvents && maximum > minimum
 			&& !((style == LinearBar || style == LinearBarVertical)
 				&& e.mouseWasClicked() && valueBox != nullptr && valueBox->isEditable()))
@@ -964,6 +967,7 @@ public:
 
 	void mouseDoubleClick()
 	{
+		DBG("In PIMPL mouseDoubleClick");
 		if (canDoubleClickToValue())
 		{
 			DragInProgress drag(*this);
@@ -1638,6 +1642,7 @@ void ZenRotaryFilmStripSlider::focusOfChildComponentChanged(FocusChangeType) { r
 void ZenRotaryFilmStripSlider::mouseDown(const MouseEvent& e) { pimpl->mouseDown(e); }
 void ZenRotaryFilmStripSlider::mouseUp(const MouseEvent&)
 {
+	DBG("In mouseUp");
 	pimpl->mouseUp();
 }
 
@@ -1649,15 +1654,20 @@ void ZenRotaryFilmStripSlider::modifierKeysChanged(const ModifierKeys& modifiers
 
 void ZenRotaryFilmStripSlider::mouseDrag(const MouseEvent& e)
 {
-	DBG("In rotary mouseDrag with distance: " << e.getDistanceFromDragStart());
+	//DBG("In rotary mouseDrag with distance: " << e.getDistanceFromDragStart());
+	MouseEvent event = e.getEventRelativeTo(this);
 	if (isEnabled())
-		pimpl->mouseDrag(e);
+		pimpl->mouseDrag(event);
 }
 
 void ZenRotaryFilmStripSlider::mouseDoubleClick(const MouseEvent&)
 {
+	//DBG("In mouseDoubleClick");
 	if (isEnabled())
+	{
 		pimpl->mouseDoubleClick();
+		this->valueBox->showEditor();
+	}
 }
 
 void ZenRotaryFilmStripSlider::mouseWheelMove(const MouseEvent& e, const MouseWheelDetails& wheel)

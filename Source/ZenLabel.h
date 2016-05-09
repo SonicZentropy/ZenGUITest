@@ -21,16 +21,21 @@ class ZenLabel : public Label
 {
 public:
 	ZenLabel(String inName, bool inTextHasShadow = false);
-	void mouseUp(const MouseEvent& e) override;
+
 	void showEditor() override;
 	bool getTextHasShadow() const { return textHasShadow; }
 	void setTextHasShadow(bool inValue) { textHasShadow = inValue; }
 
+	void mouseUp(const MouseEvent& e) override;
 	void mouseDrag(const MouseEvent& event) override;
+	void mouseDoubleClick(const MouseEvent&) override;
+	void mouseDown(const MouseEvent& event) override;
+
+
 protected:
 	bool textHasShadow;
-	//TextEditor* createEditorComponent() override;
-	//void editorAboutToBeHidden(TextEditor*) override;
+	TextEditor* createEditorComponent() override;
+	void editorAboutToBeHidden(TextEditor*) override;
 	//void focusGained(FocusChangeType) override;
 	//void textEditorTextChanged(TextEditor&) override;
 	//void textEditorReturnKeyPressed(TextEditor&) override;
