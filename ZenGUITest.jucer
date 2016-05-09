@@ -12,11 +12,47 @@
               companyWebsite="https://www.soniczentropy.com" companyEmail="zen@soniczentropy.com"
               companyName="Sonic Zentropy" defines="ZEN_DEBUG" userNotes="Debug-D:\Workspace\Cpp\JUCE\JUCE\examples\audio plugin host\Builds\VisualStudio2015\x64\Debug x64\Plugin Host.exe&#10; DebugBitwig - Z:\Bitwig Studio\bin\x64\BitwigPluginHost64.exe &#10;Release - D:\Workspace\Cpp\JUCE\JUCE\examples\audio plugin host\Builds\VisualStudio2015\x64\Debug x64\Plugin Host.exe">
   <MAINGROUP id="UsNvpE" name="ZenGUITest">
+    <GROUP id="{FD359B25-4410-5109-DC8D-B1B8AFE248B1}" name="Assets">
+      <GROUP id="{3947206B-D4D9-2843-0044-42955C1BF082}" name="fonts">
+        <FILE id="z9m4ul" name="FUTURA-BOOK.TTF" compile="0" resource="1" file="assets/fonts/FUTURA-BOOK.TTF"/>
+        <FILE id="VzTlQj" name="Quicksand-Bold.otf" compile="0" resource="1"
+              file="assets/fonts/Quicksand-Bold.otf"/>
+        <FILE id="lIBzfo" name="Quicksand-BoldItalic.otf" compile="0" resource="1"
+              file="assets/fonts/Quicksand-BoldItalic.otf"/>
+        <FILE id="Xv39G8" name="Quicksand-Italic.otf" compile="0" resource="1"
+              file="assets/fonts/Quicksand-Italic.otf"/>
+        <FILE id="I7YRY6" name="Quicksand-Regular.otf" compile="0" resource="1"
+              file="assets/fonts/Quicksand-Regular.otf"/>
+        <FILE id="uvzD8A" name="FUTUR_0.TTF" compile="0" resource="1" file="assets/fonts/FUTUR_0.TTF"/>
+        <FILE id="DKj0Oj" name="FUTURA BOLD.TTF" compile="0" resource="1" file="assets/fonts/FUTURA BOLD.TTF"/>
+        <FILE id="WfyO90" name="FUTURA MEDIUM.TTF" compile="0" resource="1"
+              file="assets/fonts/FUTURA MEDIUM.TTF"/>
+        <FILE id="JjhxGM" name="FUTURASTD-BOOK.OTF" compile="0" resource="1"
+              file="assets/fonts/FUTURASTD-BOOK.OTF"/>
+      </GROUP>
+    </GROUP>
     <GROUP id="{546B3F03-1438-7AB9-480C-E92ADCB267B7}" name="Source">
-      <FILE id="OPLxga" name="ZenLookAndFeel.cpp" compile="1" resource="0"
+      <FILE id="I2y38u" name="ZenLabel.cpp" compile="1" resource="0" file="Source/ZenLabel.cpp"/>
+      <FILE id="UL0nhW" name="ZenLabel.h" compile="0" resource="0" file="Source/ZenLabel.h"/>
+      <FILE id="wDM6CR" name="ZenNoEditTextField.cpp" compile="1" resource="0"
+            file="Source/ZenNoEditTextField.cpp"/>
+      <FILE id="QCwaKX" name="ZenNoEditTextField.h" compile="0" resource="0"
+            file="Source/ZenNoEditTextField.h"/>
+      <FILE id="M6iis3" name="ZenBinaryData.cpp" compile="1" resource="0"
+            file="Source/ZenBinaryData.cpp"/>
+      <FILE id="dISASm" name="ZenBinaryData.h" compile="0" resource="0" file="Source/ZenBinaryData.h"/>
+      <FILE id="JuQQsC" name="ZenLookAndFeel.cpp" compile="1" resource="0"
             file="Source/ZenLookAndFeel.cpp"/>
-      <FILE id="rd1tzd" name="ZenLookAndFeel.h" compile="0" resource="0"
+      <FILE id="oUrPKa" name="ZenLookAndFeel.h" compile="0" resource="0"
             file="Source/ZenLookAndFeel.h"/>
+      <FILE id="cp95RF" name="DummyComponent.cpp" compile="0" resource="0"
+            file="Source/DummyComponent.cpp"/>
+      <FILE id="Js5N94" name="DummyComponent.h" compile="0" resource="0"
+            file="Source/DummyComponent.h"/>
+      <FILE id="ay5Rfn" name="ZenRotaryFilmStripSlider.cpp" compile="1" resource="0"
+            file="Source/ZenRotaryFilmStripSlider.cpp"/>
+      <FILE id="b8gvQs" name="ZenRotaryFilmStripSlider.h" compile="0" resource="0"
+            file="Source/ZenRotaryFilmStripSlider.h"/>
       <FILE id="AhashQ" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="ND5I8G" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
@@ -54,9 +90,9 @@
         <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
-        <MODULEPATH id="zen_utils" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_plugin_client" path="../JUCE/modules"/>
         <MODULEPATH id="juce_box2d" path="../JUCE/modules"/>
+        <MODULEPATH id="zen_utils" path="../JUCE/modules"/>
       </MODULEPATHS>
     </VS2015>
   </EXPORTFORMATS>

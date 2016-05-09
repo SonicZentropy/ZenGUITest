@@ -21,8 +21,12 @@ ZenGuitestAudioProcessorEditor::ZenGuitestAudioProcessorEditor (ZenGuitestAudioP
     : AudioProcessorEditor (&p), processor (p)
 {
 	addAndMakeVisible(mainComponent = new MainComponent());
-
+	compBoundsConstrain = new ComponentBoundsConstrainer();
+	compBoundsConstrain->setSizeLimits(100, 100, 1600, 900);
+	addAndMakeVisible(resizeComponent = new ResizableCornerComponent(this, compBoundsConstrain));
+	
     setSize (800, 600);
+	
 	ZEN_COMPONENT_DEBUG_ATTACH(this);
 }
 
@@ -38,5 +42,5 @@ void ZenGuitestAudioProcessorEditor::paint (Graphics& g)
 
 void ZenGuitestAudioProcessorEditor::resized()
 {
-
+	resizeComponent->setBounds(getWidth() - 16, getHeight() - 16, 16, 16);
 }

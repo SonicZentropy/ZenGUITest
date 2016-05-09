@@ -36,6 +36,8 @@ public:
 private:
     ZenGuitestAudioProcessor& processor;
 	ScopedPointer<MainComponent> mainComponent;
+	ScopedPointer<ResizableCornerComponent> resizeComponent;
+	ScopedPointer<ComponentBoundsConstrainer> compBoundsConstrain;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ZenGuitestAudioProcessorEditor)
 };
